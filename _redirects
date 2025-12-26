@@ -1,10 +1,5 @@
-# Redirect www to non-www
-https://www.hennywill.com/* https://hennywill.com/:splat 301!
+# Redirect www to non-www (configure in Cloudflare Dashboard instead)
+# Redirect .pages.dev to custom domain (configure in Cloudflare Dashboard instead)
 
-# Redirect .pages.dev to custom domain
-https://hennywillcom.pages.dev/* https://hennywill.com/:splat 301!
-
-# Redirect HTTP to HTTPS (handled by Cloudflare automatically)
-
-# Handle 404s - serve index.html for SPA behavior
-/* /index.html 200
+# All other paths serve index.html
+/index.html /index.html 200
