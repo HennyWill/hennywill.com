@@ -51,3 +51,10 @@ yarn-error.log*
 .env
 .env.local
 .env.*.local
+
+# Documentation and deployment guides (keep local only)
+AUDIT_REPORT.md
+CHANGELOG.md
+DEPLOYMENT.md
+QUICK_DEPLOY.md
+COMMANDS.txt
