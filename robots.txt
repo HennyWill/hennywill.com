@@ -1,0 +1,7 @@
+# Aha! What are you looking for here? 👀
+# Found the Easter egg! Well done, a true SEO specialist always checks robots.txt 😎
+
+User-agent: *
+Allow: /
+
+Sitemap: https://hennywill.com/sitemap.xml
