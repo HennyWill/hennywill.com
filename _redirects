@@ -1,0 +1,10 @@
+# Redirect www to non-www
+https://www.hennywill.com/* https://hennywill.com/:splat 301!
+
+# Redirect .pages.dev to custom domain
+https://hennywillcom.pages.dev/* https://hennywill.com/:splat 301!
+
+# Redirect HTTP to HTTPS (handled by Cloudflare automatically)
+
+# Handle 404s - serve index.html for SPA behavior
+/* /index.html 200

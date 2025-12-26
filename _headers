@@ -4,6 +4,8 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
 
 /*.css
   Cache-Control: public, max-age=31536000, immutable
@@ -14,5 +16,20 @@
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
 
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
+  Link: </styles.css>; rel=preload; as=style
+  Link: </script.js>; rel=preload; as=script
+  Link: </profile.webp>; rel=preload; as=image
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
