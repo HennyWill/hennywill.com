@@ -1,0 +1,33 @@
+=================================================================
+📋 ШВИДКІ КОМАНДИ ДЛЯ ДЕПЛОЮ
+=================================================================
+
+1️⃣ СТВОРИ GITHUB РЕПОЗИТОРІЙ
+   Йди на: https://github.com/new
+   Repository name: hennywill.com
+   Public repository
+   НЕ додавай README/license/.gitignore
+   
+2️⃣ PUSH НА GITHUB
+   cd /Users/hennywill/Documents/website
+   git push -u origin main
+
+3️⃣ CLOUDFLARE PAGES
+   Йди на: https://dash.cloudflare.com/
+   Workers & Pages → Create application → Pages → Connect to Git
+   Вибери репозиторій: hennywill.com
+   
+   Settings:
+   - Framework preset: None
+   - Build command: (empty)
+   - Build output directory: /
+   
+   → Save and Deploy
+
+4️⃣ CUSTOM DOMAIN
+   В Cloudflare Pages → Custom domains
+   Додай: hennywill.com
+   
+=================================================================
+📖 ДЕТАЛЬНІ ІНСТРУКЦІЇ: QUICK_DEPLOY.md
+=================================================================
