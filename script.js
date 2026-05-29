@@ -168,35 +168,6 @@ function initAnimations() {
     });
 }
 
-// Add scroll event for header shadow (if we add a header later)
-let lastScroll = 0;
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    // You can add header shadow logic here if needed
-
-    lastScroll = currentScroll;
-});
-
-// Performance optimization: Debounce resize events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Handle window resize
-const handleResize = debounce(() => {
-    // Add any resize-specific logic here if needed
-}, 250);
-
-window.addEventListener('resize', handleResize);
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -207,9 +178,26 @@ document.addEventListener('DOMContentLoaded', () => {
 // Add loading complete class for any CSS transitions
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
-    // Fetch GitHub repos after page load to avoid blocking the critical path
-    setTimeout(fetchGitHubRepos, 200);
+    // Lazy-load GitHub repos when projects container is near viewport
+    initGitHubReposLazyLoad();
 });
+
+// Lazy-load GitHub repos when projects container is near the viewport
+function initGitHubReposLazyLoad() {
+    const container = document.getElementById('github-projects');
+    if (!container) return;
+
+    const repoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                fetchGitHubRepos();
+                repoObserver.disconnect(); // Load only once
+            }
+        });
+    }, { rootMargin: '200px 0px' }); // Load 200px before scrolling into view
+
+    repoObserver.observe(container);
+}
 
 // Preload critical resources for better performance
 function preloadResources() {
