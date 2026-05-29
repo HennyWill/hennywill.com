@@ -200,9 +200,6 @@ window.addEventListener('resize', handleResize);
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // Fetch GitHub repos
-    fetchGitHubRepos();
-
     // Initialize animations after a short delay to ensure DOM is ready
     setTimeout(initAnimations, 100);
 });
@@ -210,6 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // Add loading complete class for any CSS transitions
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
+    // Fetch GitHub repos after page load to avoid blocking the critical path
+    setTimeout(fetchGitHubRepos, 200);
 });
 
 // Preload critical resources for better performance
