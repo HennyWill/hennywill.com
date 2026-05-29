@@ -25,6 +25,7 @@
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
   Link: </script.js>; rel=preload; as=script
+  Link: </fonts/inter-latin.woff2>; rel=preload; as=font; type=font/woff2; crossorigin
   Link: </profile-small.webp>; rel=preload; as=image; media="(max-width: 768px)"
   Link: </profile.webp>; rel=preload; as=image; media="(min-width: 769px)"
 
