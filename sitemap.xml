@@ -2,8 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://hennywill.com/</loc>
-        <lastmod>2026-05-29</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://hennywill.com/projects/</loc>
+        <lastmod>2026-10-07</lastmod>
     </url>
 </urlset>

@@ -16,7 +16,9 @@ A modern, fast, and responsive single-page portfolio website built with vanilla 
 ```
 website/
 ├── index.html      # Main HTML file
-├── styles.css      # All styles
+├── projects/
+│   └── index.html  # Independent Software Projects page
+├── styles.css      # Shared styles and local font declarations
 ├── script.js       # JavaScript for interactions and GitHub API
 └── README.md       # This file
 ```
@@ -187,3 +189,19 @@ This is a personal website. Feel free to use the code as inspiration, but please
 ---
 
 Built with ❤️ from Ukraine 🇺🇦
+
+
+## Software Projects update (October 7, 2026)
+
+The site remains a static personal portfolio with no build command, package dependencies,
+or configured test/lint suite. `/projects/` presents the two published extensions, verified
+Chrome Web Store features, approximate users (101 and 148), development plans, and contact.
+Counts are a dated snapshot and should be checked periodically against the store listings.
+Homepage SEO positioning, About content, confidential work, and GitHub integration are preserved.
+Shared styles were extracted from the homepage's inline CSS to reuse the current design.
+
+Local checks passed for JavaScript syntax, diff whitespace, internal links and assets,
+metadata presence/canonical URLs, JSON-LD parsing, sitemap XML, and HTTP responses for
+both pages. Browser visual, mobile, keyboard, and console verification remains manual
+because no browser was connected during implementation. Preview `/` and `/projects/`
+at desktop and mobile widths before publishing. No deployment has been performed.
